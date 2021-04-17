@@ -14,7 +14,7 @@ export class GitHubComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("Hello");
-    this.githubService.get();
+    this.markdown = this.githubService.get();
   }
 
 }

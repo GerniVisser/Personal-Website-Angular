@@ -12,6 +12,8 @@ import 'prismjs/plugins/line-numbers/prism-line-numbers.js';
 import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
 import { GitHubComponent } from './Features/git-hub/git-hub.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -19,11 +21,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     GitHubComponent
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
     FormsModule,
     AppRoutingModule,
     MarkdownModule.forRoot(),
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
