@@ -3,6 +3,14 @@
 @import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 @import "prismjs/plugins/line-highlight/prism-line-highlight.css";
 
+html,
+body,
+#fullheight {
+  min-height: 100% !important;
+  height: 100%;
+  margin: 0;
+}
+
 body {
   background: #000000;
   color: #ffffff;
