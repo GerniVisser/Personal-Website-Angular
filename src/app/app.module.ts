@@ -13,17 +13,19 @@ import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
 import { GitHubComponent } from './Features/git-hub/git-hub.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
-import { HomePageComponent } from './home-page/home-page.component';
+import { HomePageComponent } from './Components/home-page/home-page.component';
+import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     GitHubComponent,
-    HomePageComponent
+    HomePageComponent,
+    NavBarComponent
   ],
   imports: [
-  BrowserModule,
+    BrowserModule,
     FormsModule,
     AppRoutingModule,
     MarkdownModule.forRoot(),
