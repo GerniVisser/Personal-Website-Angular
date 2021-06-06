@@ -8,11 +8,16 @@ import { GithubService } from './../../_Services/github.service';
 })
 export class NavBarComponent implements OnInit {
 
+  repos : any;
+
   constructor(private githubService: GithubService) { }
 
   ngOnInit(): void {
-    this.githubService.getReposSummary("GerniVisser");
-    this.githubService.getRepoData("GerniVisser","Chess");
+    this.githubService.getReposSummary("GerniVisser").subscribe(res =>{
+      this.repos = res;
+      console.log(res);
+      
+    })
   }
 
 }

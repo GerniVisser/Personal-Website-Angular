@@ -10,15 +10,11 @@ export class GithubService {
   constructor(private http: HttpClient) { }
 
   getReposSummary(username: string):any{
-    this.http.get(this.baseUrl + "/Repos/Summary/" + username).subscribe(res => {
-      console.log(res);
-     return res
-   }, error => console.log(error))
+    return this.http.get(this.baseUrl + "/Repos/Summary/" + username)
  }
 
   getRepoData(username: string, reponame: string):any{
     this.http.get(this.baseUrl + "/Repos/RepoData/" + username + "/" + reponame).subscribe(res => {
-      console.log(res);
       return res
     }, error => console.log(error))
   }
