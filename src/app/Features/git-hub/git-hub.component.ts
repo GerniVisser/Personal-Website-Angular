@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubService } from './../../_Services/github.service';
+import { ActivatedRoute } from '@angular/router';
+import { HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-git-hub',
@@ -8,12 +10,18 @@ import { GithubService } from './../../_Services/github.service';
 })
 export class GitHubComponent implements OnInit {
 
+  repoID: string;
   markdown: string;
   pageLink: string;
+  
 
-  constructor(private githubService: GithubService) { }
+  constructor(private githubService: GithubService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    this.getRepoID();
+
+
     this.pageLink = "https://github.com/jaime-olivares/zipstorer";
     this.markdown = `
     # ZipStorer
@@ -40,8 +48,14 @@ export class GitHubComponent implements OnInit {
     The ZipStorer class is the unique one needed to create the zip file. It contains a nested structure *(ZipFileEntry)* for collecting each directory entry. The class has been declared inside the System.IO namespace. 
     
     There is no default constructor. There are two ways to construct a new ZipStorer instance, depending on specific needs: use either the *Create()* or the *Open()* static method. To create a new Zip file, use the *Create()* method like this:`;
-    console.log(this.markdown);
     
+  }
+
+  getRepoID() {
+    this.route.params.subscribe(prams => {
+      this.repoID = prams.id;
+      
+    })
   }
 
 }

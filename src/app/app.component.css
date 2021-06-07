@@ -1,1 +1,9 @@
+.flex-background {
+  flex-direction: column-reverse;
+}
 
+@media (min-width: 855px) {
+  .flex-background {
+    flex-direction: row;
+  }
+}
