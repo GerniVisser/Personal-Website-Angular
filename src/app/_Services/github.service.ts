@@ -14,9 +14,7 @@ export class GithubService {
  }
 
   getRepoData(username: string, reponame: string):any{
-    this.http.get(this.baseUrl + "/Repos/RepoData/" + username + "/" + reponame).subscribe(res => {
-      return res
-    }, error => console.log(error))
+    return this.http.get(this.baseUrl + "/Repos/RepoData/" + username + "/" + reponame)
   }
 } 
 
