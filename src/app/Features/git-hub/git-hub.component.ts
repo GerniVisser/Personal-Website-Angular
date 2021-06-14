@@ -14,6 +14,7 @@ export class GitHubComponent implements OnInit {
   repoData: any;
   markdown: string;
   pageLink: string;
+  dateUpdated: Date;
   
 
   constructor(private githubService: GithubService, private route: ActivatedRoute) { }
@@ -21,10 +22,6 @@ export class GitHubComponent implements OnInit {
   ngOnInit(): void {
 
     this.getRepoID();
-
-
-    this.pageLink = "https://github.com/jaime-olivares/zipstorer";
-    this.markdown;
     
   }
 
@@ -39,8 +36,8 @@ export class GitHubComponent implements OnInit {
     this.githubService.getRepoData(username,repoID).subscribe(res =>{
       this.repoData = res;
       this.markdown = atob(res.content);
-      console.log(res);
-      
+      this.pageLink = res.url;
+      this.dateUpdated = res.updated_at;
     })
   }
 
