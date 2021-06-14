@@ -10,8 +10,10 @@ import { HttpParams } from '@angular/common/http';
 })
 export class GitHubComponent implements OnInit {
 
+  isLoaded:boolean = false;
+
   repoID: string;
-  repoData: any;
+  repoData: any ;
   markdown: string;
   pageLink: string;
   dateUpdated: Date;
@@ -37,8 +39,9 @@ export class GitHubComponent implements OnInit {
       this.repoData = res;
       this.markdown = atob(res.content);
       this.pageLink = res.url;
-      this.dateUpdated = res.updated_at;
+      this.dateUpdated = new Date(res.updated_at);
+      
+      this.isLoaded = true;
     })
   }
-
 }
