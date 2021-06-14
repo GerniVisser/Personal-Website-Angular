@@ -1,11 +1,11 @@
 <div class="flex-container">
-    <div class='container'>
+    <div class='container' *ngIf="isLoaded">
         <div class="flex-shrink-0 mb-4 mb-md-0">
             <div class="mx-auto px-1 px-md-4 px-lg-5">
                 <div class="flex-heading justify-content-between px-3 mb-4">
                     <div class="flex-shrink-0 flex-" >
                         <h1>{{repoData.name}}</h1> 
-                        <p style="color: darkgray;">{{'on Aug 14' + dateUpdated}}</p> 
+                        <p style="color: darkgray;">{{'on ' + dateUpdated.toDateString().slice(4,dateUpdated.toDateString().length)}}</p> 
                     </div>
                     <div>
                         <a href={{pageLink}} target="_blank">

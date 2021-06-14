@@ -15,8 +15,6 @@ export class NavBarComponent implements OnInit {
   ngOnInit(): void {
     this.githubService.getReposSummary("GerniVisser").subscribe(res =>{
       this.repos = res;
-      console.log(res);
-      
     })
   }
 
