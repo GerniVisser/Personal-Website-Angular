@@ -11,7 +11,7 @@ export class OwnerInfoService {
     let mail = {
       recipientAddress: 'gerni.visser@gmail.com',
       subject: 'Communication from Protfolio',
-      body: 'Good day Mr.Visser',
+      body: 'Good day Mr Visser',
     }
 
     return mail;
