@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './Components/home-page/home-page.component';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
+import { FooterComponent } from './Components/footer/footer.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
     AppComponent,
     GitHubComponent,
     HomePageComponent,
-    NavBarComponent
+    NavBarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,15 +1,12 @@
-<div class="d-flex flex-background" style="height: 100%;">
+<div class="d-flex flex-background" style="height: 100%; margin: 0px;">
     <div class="flex-fill">
-        <div class="">
-            <div class="">
-                <b class="frontpage-headder">GERNI VISSER </b>
-                <div style="margin-top:20px; font-size: large; font-weight: 450;">
-                    <p>
-                    Software developer in making. On a mission to learn about software development 
-                    research driven by curiosity. 
-                    </p>
-                </div> 
-            </div>
+        <div class="home-text-overlay">
+            <b class="frontpage-headder">GERNI VISSER </b>
+            <div style="margin-top:20px; font-size: large; font-weight: 450;">
+                <p>
+                Software developer in making. On a mission to learn about software development driven by curiosity. 
+                </p>
+            </div> 
         </div>
     </div>
     <div class="bg flex-fill flex-grow-1">
@@ -17,3 +14,51 @@
     </div>
     
 </div>
+
+<div style=" background-color: #191919;">
+    <div style="padding-top: 8%; padding-bottom: 5%; width: 80%; margin: auto;">
+        <b class="frontpage-headder">ABOUT ME </b>
+        <br>
+        <div style="padding-top: 4%; padding-bottom: 10%">
+            <p>
+                Im a super curious guy facinated by the ability to craete something from nothing. 
+                Take this webpage, I started with a blank editor knowing this project 
+                will have something to do with HTML. Using this same stratagy driven by an idea and my inhabition 
+                I was able to create some pretty cool projects. In this journey of mine I have become fluent in Python and
+                C# and using thecnologies like ASP.NET, Unity, OpenCV and many more. 
+            </p>
+            
+        </div>
+
+
+        <b class="frontpage-headder">MY WORK </b>
+        <br>
+        <div style="padding-top: 4%;">
+            <p>
+                I have worked on many porjects over the years in many differnet sub-category’s 
+                within computer science including: web-dev, game-dev, artificial intelligence and 
+                neural networks, Microcontrollers and mobile development. I am 
+                mainly fascinated by backend development, developing efficient, secure 
+                systems.
+            </p>
+            <i>
+                Below are links to some of my work :
+            </i>
+        </div>
+        <div class="pt-2" *ngIf="isLoaded">
+            <ngb-carousel style="background-color: #313131;">
+                <ng-template ngbSlide *ngFor="let repo of repos">
+                  <div class="mt-5 mb-5" >
+                    <a [routerLink]="['/projects',repo.name]" class="frontpage-headder">
+                        <h3 style="text-align: center;">{{repo.name}}</h3>
+                    </a>
+                  </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
+
+

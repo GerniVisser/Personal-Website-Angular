@@ -3,7 +3,6 @@
 
   /* Full height */
   height: 100%;
-  width: 50%;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -11,8 +10,67 @@
   background-size: cover;
 }
 
-@media (min-width: 855px) {
+@media (min-width: 0px) {
   .bg {
     width: 100%;
   }
+}
+
+@media (min-width: 1000px) {
+  .bg {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1350px) {
+  .bg {
+    width: 60%;
+  }
+}
+
+.flex-background {
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 855px) {
+  .flex-background {
+    flex-direction: row;
+  }
+}
+
+div.home-text-overlay {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: auto;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media screen and (min-width: 601px) {
+  div.home-text-overlay {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.home-text-overlay {
+    font-size: 25px;
+  }
+}
+
+.frontpage-headder {
+  font-size: 28px;
+  font-weight: 100;
+  line-height: 24px;
+  letter-spacing: 8px;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  padding-bottom: 10%;
+  margin: auto;
+}
+
+.greenborder {
+  border-style: solid;
+  border-color: #0000ff;
 }

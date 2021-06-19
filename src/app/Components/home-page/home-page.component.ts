@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GithubService } from 'src/app/_Services/github.service';
 
 @Component({
   selector: 'app-home-page',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  isLoaded:boolean = false;
+
+  repos : any;
+
+  constructor(private githubService: GithubService) { }
 
   ngOnInit(): void {
+    this.githubService.getReposSummary("GerniVisser").subscribe(res =>{
+      this.repos = res;
+
+      this.isLoaded = true;
+    })
   }
 
 }
