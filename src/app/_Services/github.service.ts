@@ -1,12 +1,11 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from './../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GithubService {
-  baseUrl: string = environment.apiUrl;
+  baseUrl: string = "https://localhost:44300/api/Github";
 
   constructor(private http: HttpClient) { }
 
