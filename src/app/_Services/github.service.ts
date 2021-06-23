@@ -6,7 +6,7 @@ import { environment } from './../../environments/environment';
   providedIn: 'root'
 })
 export class GithubService {
-  baseUrl: string = "m/api/github";
+  baseUrl: string = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
