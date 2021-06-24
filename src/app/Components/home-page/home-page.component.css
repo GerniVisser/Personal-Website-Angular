@@ -46,17 +46,6 @@ div.home-text-overlay {
   padding-left: 20px;
   padding-right: 20px;
 }
-@media screen and (min-width: 601px) {
-  div.home-text-overlay {
-    font-size: 30px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  div.home-text-overlay {
-    font-size: 25px;
-  }
-}
 
 .frontpage-headder {
   font-size: 28px;
@@ -73,4 +62,11 @@ div.home-text-overlay {
 .greenborder {
   border-style: solid;
   border-color: #0000ff;
+}
+
+@media screen and (min-width: 600px) {
+  .generalText {
+    font-size: 18px;
+    font-weight: 450;
+  }
 }
