@@ -1,27 +1,26 @@
-# Frontend
+# Portfolio website frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+The front-end for my personal website is being developed in [Angular](https://angular.io) an frontend JavaScript
+framework maintained by Google. This forntend is intended to serve the
+[ASP.Net backend API](https://github.com/GerniVisser/Portfolio-Website-Backend)
+to create a visually stimulating and reactive GUI for users to inteact with the backend API.
 
-## Development server
+## Usage/Examples
+
+### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+### Build
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng build` to build the project. Configure the angualar.json folder to set the folder location of the build. Use the `--prod` flag for a production build.
 
-## Build
+### Run with backend
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Clone and run the backend repo to get access to the backend API on `port:localhost/44300`
 
-## Running unit tests
+## Contributing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Contributions are always welcome!
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Create a well documented [Pull Reaquests](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) that explaines all changes made and I will have a look and contact you with any questions.
