@@ -37,7 +37,7 @@
 
         <b class="frontpage-headder">MY WORK </b>
         <br>
-        <div class="mb-2 generalText"  style="padding-top: 4%; padding-bottom: 4%;">
+        <div class="mb-2 generalText"  style="padding-top: 4%;">
             <p>
                 I have worked on many projects over the years in many different sub-category’s 
                 within computer science, including Web-dev, Game-dev, Artificial Intelligence and 
@@ -55,7 +55,7 @@
             </i>
             <ngb-carousel style="background-color: #313131;">
                 <ng-template ngbSlide *ngFor="let repo of repos">
-                  <div class="mt-5" >
+                  <div class="mt-5 mb-5" >
                     <p style="text-align: center;">Click to view Project</p>
                     <a [routerLink]="['/projects',repo.name]" class="frontpage-headder">
                         <h3 style="text-align: center;">{{repo.name}}</h3>
