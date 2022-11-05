@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './Components/home-page/home-page.component';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { FooterComponent } from './Components/footer/footer.component';
     MarkdownModule.forRoot(),
     NgbModule,
     HttpClientModule,
+    LazyLoadImageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,7 +10,16 @@
         </div>
     </div>
     <div class="bg flex-fill flex-grow-1">
-        
+        <ngb-carousel #carousel [interval]="3000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus">
+            <ng-template ngbSlide *ngFor="let img of images; index as i">
+              <div class="carousel-caption ">
+                <h3>My slide {{i + 1}} title</h3>
+              </div>
+                <div>
+                    <img [lazyLoad]="img" alt="My image {{i + 1}} description" />
+                </div>
+            </ng-template>
+          </ngb-carousel>
     </div>
     
 </div>
