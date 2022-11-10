@@ -9,23 +9,11 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/n
 })
 export class HomePageComponent implements OnInit {
 
-  images = [
-    "PxmcV87q/Gerni-1.png",
-    "mr1KMnNC/Gerni-2.png",
-    "k4fZddnr/Gerni-Stable-Diffusion-2.png",
-    "pdQ4qF4L/Gerni-Stable-Diffusion-9.png",
-    "CxqWnt4D/Gerni-Stable-Diffusion-8.png",
-  ].map((n) => `https://i.postimg.cc/${n}`);
+  image = "../../../assets/Images/test1.png";
 
   isLoaded:boolean = false;
 
   repos : any;
-
-  paused = false;
-  unpauseOnArrow = false;
-  pauseOnIndicator = false;
-  pauseOnHover = true;
-  pauseOnFocus = true;
 
   @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
 
