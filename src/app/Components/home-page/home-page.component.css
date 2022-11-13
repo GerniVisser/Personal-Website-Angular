@@ -1,6 +1,5 @@
 .bg {
   height: 100%;
-  width: auto;
 }
 
 .flex-background {
@@ -14,8 +13,8 @@
 }
 
 div.home-text-overlay {
-  margin-top: 15%;
-  margin-bottom: 15%;
+  margin-top: 20%;
+  margin-bottom: 20%;
   margin-left: auto;
   color: white;
   padding-left: 10%;

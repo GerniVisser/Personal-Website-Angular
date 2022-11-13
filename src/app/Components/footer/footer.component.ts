@@ -9,12 +9,9 @@ import { OwnerInfoService } from './../../_Services/owner-info.service';
 
 export class FooterComponent implements OnInit {
 
-  mailingInfo: any;
-
-  constructor(private ownerInfo: OwnerInfoService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.mailingInfo = this.ownerInfo.getMailingInfo();
   }
 
 }

@@ -10,13 +10,10 @@ import { OwnerInfoService } from './../../_Services/owner-info.service';
 export class NavBarComponent implements OnInit {
 
   repos : any;
-  mailingInfo : any;
 
-  constructor(private githubService: GithubService, private ownerInfo: OwnerInfoService) { }
+  constructor(private githubService: GithubService) { }
 
   ngOnInit(): void {
-    this.mailingInfo = this.ownerInfo.getMailingInfo();
-
     this.githubService.getReposSummary("GerniVisser").subscribe(res =>{
       this.repos = res;
     })

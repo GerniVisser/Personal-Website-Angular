@@ -9,7 +9,7 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/n
 })
 export class HomePageComponent implements OnInit {
 
-  image = "../../../assets/Images/test1.png";
+  image = "../../../assets/Images/SelfAI.png";
 
   isLoaded:boolean = false;
 
